@@ -1,0 +1,29 @@
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.title {
+  display: flex;
+}
+
+
+.svgIcon {
+  height: 10%;
+  width: 10%;
+  fill: #D7DADC;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.spacer {
+  width: 50%;
+}

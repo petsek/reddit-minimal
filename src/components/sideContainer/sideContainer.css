@@ -1,0 +1,6 @@
+.sideContainer {
+  width: 20%;
+  margin: 30px 40px 0 40px;
+  box-sizing: border-box;
+  border: black solid 1px;
+}
