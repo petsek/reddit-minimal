@@ -9,19 +9,20 @@ export const Category = () => {
 
   useEffect(() => {
     dispatch(fetchCategory())
-  }, [])
+  }, [dispatch])
 
   console.log(categories)
   return (
     <ul className="categoryUl">
-      {categories.map(category => (
-        <li key= {category.id} className = 'categoryLi'>
-          <img src= {category.icon_img || `https://api.adorable.io/avatars/25/${category.display_name}`} alt= {category.display_name_prefixed} className = 'categoryIcon' />
-          <button>{category.display_name_prefixed}</button>
-        </li>
-      ))}
+      {
+      categories.slice(0,12).map((category) => (
+      <li key = {category.id} className = 'categoryLi'>
+        <img src= {category.icon_img || `https://api.adorable.io/avatars/25/${category.display_name}`} alt= {category.display_name_prefixed} className = 'categoryIcon' />
+        <button>{category.display_name_prefixed}</button>
+      </li>
+      ))
+      }
 
     </ul>
-
   )
 }
