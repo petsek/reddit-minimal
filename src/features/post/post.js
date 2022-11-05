@@ -1,10 +1,27 @@
 import './post.css'
 import {FaReddit} from 'react-icons/fa';
-import { selectPost } from './postSlice';
-import { useSelector } from 'react-redux';
+import { fetchPost, selectPost } from './postSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
 
 export const Post=() => {
-  const posts = useSelector((state) =>state)
+
+  // const fetchPost = async () => {
+  //   const response = await fetch('https://www.reddit.com/r/all.json')
+  //   const json = await response.json();
+  //   const data =  json.data.children.map(post => post.data)
+  //   console.log(data)
+  //   return data
+  // }
+
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    dispatch(fetchPost())
+  }, [])
+
+
+  const posts = useSelector(selectPost)
   console.log(posts)
 
   return (
