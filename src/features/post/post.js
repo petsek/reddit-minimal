@@ -44,24 +44,24 @@ export const Post=() => {
           : null}
 
         {(!post.url.includes('i.redd.it') && !post.url.includes('v.redd.it') && post.selftext.length > 0 ) ? <p>{post.selftext}</p> : null }
-        {(post.url.includes('v.redd.it') || post.url.includes('i.redd.it')) ? null : <div><a href={post.url} target="_blank" rel="noreferrer" >{post.url}</a></div>}
+        {(post.url.includes('v.redd.it') || post.url.includes('i.redd.it')) ? null : <p><a href={post.url} target="_blank" rel="noreferrer" >{post.url}</a></p>}
         </div>
         <div className="footerContainer">
           <div className="footerElement">
             <p>&#128077;</p>
-            <p>10000</p>
+            <p>{post.ups}</p>
           </div>
           <div className="footerElement">
             <p>&#128338;</p>
-            <p>Posted 2 hours ago</p>
+            <p>Posted {Math.round(((new Date().getTime()/1000) - post.created_utc)/3600)} hours ago</p>
           </div>
           <div className="footerElement">
           <FaReddit />
-          <p>Go to Reddit</p>
+          <p><a href={`https://www.reddit.com/${post.subreddit_name_prefixed}/comments/${post.id}/${post.title}/`} target= '_blank'>Go to Reddit </a></p>
           </div>
           <div className="footerElement">
             <p>&#128172;</p>
-            <p>326</p>
+            <p>{post.num_comments}</p>
           </div>
         </div>
       </div>
