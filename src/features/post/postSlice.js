@@ -1,14 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-export const fetchPost = createAsyncThunk('post/fetchPost', async () => {
+
+export const fetchPost = createAsyncThunk('posts/fetchPost', async () => {
   const response = await fetch('https://www.reddit.com/r/all.json')
   const json = await response.json();
-  return json.data.children.map(post => post.data)
-
+  const data =  json.data.children.map(post => post.data)
+  return data
 })
 
 
-const postSlice = createSlice ({
+
+export const postSlice = createSlice ({
   name: 'post',
   initialState: {
     posts: [],
@@ -25,7 +27,7 @@ const postSlice = createSlice ({
         state.hasError = false;
       })
       .addCase(fetchPost.fulfilled, (state,action) => {
-        state.isLoading = true;
+        state.isLoading = false;
         state.hasError = false;
         state.posts = action.payload;
       })
