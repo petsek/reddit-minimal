@@ -13,7 +13,7 @@ export const fetchCategory = createAsyncThunk('category/fetchCategory', async ()
 export const categorySlice = createSlice ({
   name: 'category',
   initialState: {
-    categories: {},
+    categories: [],
     isLoading: false,
     hasError: false
   },

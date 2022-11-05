@@ -35,3 +35,14 @@ p {
   margin: 0;
   text-align: center;
 }
+
+.postImage {
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.postVideo {
+  margin: auto;
+  display: block;
+}
