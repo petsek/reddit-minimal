@@ -3,7 +3,7 @@ import {FaReddit} from 'react-icons/fa';
 import { fetchPost, selectPost } from './postSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from "react";
-import { setSearchTerm } from '../search/searchSlice';
+
 
 export const Post=() => {
 
@@ -20,7 +20,7 @@ export const Post=() => {
   
   useEffect(() => {
     dispatch(fetchPost())
-  }, [])
+  }, [dispatch])
 
 
   const posts = useSelector(selectPost)
@@ -58,7 +58,7 @@ export const Post=() => {
           </div>
           <div className="footerElement">
           <FaReddit />
-          <p><a href={`https://www.reddit.com/${post.subreddit_name_prefixed}/comments/${post.id}/${post.title}/`} target= '_blank'>Go to Reddit </a></p>
+          <p><a href={`https://www.reddit.com/${post.subreddit_name_prefixed}/comments/${post.id}/${post.title}/`} target= '_blank' rel="noreferrer">Go to Reddit </a></p>
           </div>
           <div className="footerElement">
             <p>&#128172;</p>

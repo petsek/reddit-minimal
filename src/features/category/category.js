@@ -10,7 +10,7 @@ export const Category = () => {
 
   useEffect(() => {
     dispatch(fetchCategory())
-  }, [])
+  }, [dispatch])
 
 
   console.log(categories)

@@ -1,7 +1,6 @@
 import './search.css'
 import { selectSearch, setSearchTerm } from './searchSlice';
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from "react";
 import { fetchPost, filterOnSearch } from '../post/postSlice';
 
 export const Search =() => {

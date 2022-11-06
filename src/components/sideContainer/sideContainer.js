@@ -5,7 +5,6 @@ import { selectCategory } from "../../features/category/categorySlice";
 
 
 export const SideContainer = () => {
-  const categories = useSelector(selectCategory)
 
   return (
     <div className= 'sideContainer'>
