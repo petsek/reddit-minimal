@@ -1,4 +1,6 @@
+import { Search } from '../../features/search/search'
 import './header.css'
+
 
 export const Header = () => {
   return (
@@ -10,7 +12,7 @@ export const Header = () => {
         <h3>Reddit<span>Minimal</span></h3>
       </div>
       <div className = 'searchBar'>
-        <h3>searchBar</h3>
+        <Search />
       </div>
       <div className='spacer'></div>
     </div>

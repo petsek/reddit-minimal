@@ -37,6 +37,11 @@ margin-top: 5px;
 p {
   margin: auto;
   text-align: center;
+  width: 100%;
+}
+
+.postUrl a{
+  font-size: 20px;
 }
 
 p a {
@@ -49,13 +54,18 @@ p a {
   text-align: center;
 }
 
-.postImage {
+.postMedia {
+  max-width: 630px;
+  height: auto;
   width: 90%;
   margin: auto;
   display: block;
 }
 
+.postImage {
+width: 100%;
+}
+
 .postVideo {
-  margin: auto;
-  display: block;
+width: 100%;
 }

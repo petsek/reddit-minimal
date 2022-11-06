@@ -1,0 +1,6 @@
+.search {
+  display: inline-flex;
+}
+.search label {
+  padding-right: 5px;;
+}

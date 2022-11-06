@@ -3,6 +3,7 @@ import {FaReddit} from 'react-icons/fa';
 import { fetchPost, selectPost } from './postSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from "react";
+import { setSearchTerm } from '../search/searchSlice';
 
 export const Post=() => {
 
@@ -15,6 +16,7 @@ export const Post=() => {
   // }
 
   const dispatch = useDispatch();
+
   
   useEffect(() => {
     dispatch(fetchPost())
@@ -22,7 +24,6 @@ export const Post=() => {
 
 
   const posts = useSelector(selectPost)
-  console.log(posts)
 
   return (
     <div>
@@ -37,14 +38,14 @@ export const Post=() => {
         </div>
         <div className="postMedia">
           {(post.url.includes('i.redd.it')) ? <img className = 'postImage' src={post.url} alt=''/> : null}
-          {(post.url.includes('v.redd.it')) ?
+          {(post.is_video) ?
           <video className= 'postVideo' preload="auto" controls>
             <source src={post.media.reddit_video.fallback_url} type="video/mp4" />
           </video> 
           : null}
 
-        {(!post.url.includes('i.redd.it') && !post.url.includes('v.redd.it') && post.selftext.length > 0 ) ? <p>{post.selftext}</p> : null }
-        {(post.url.includes('v.redd.it') || post.url.includes('i.redd.it')) ? null : <p><a href={post.url} target="_blank" rel="noreferrer" >{post.url}</a></p>}
+        {/* {(!post.url.includes('i.redd.it') && !post.url.includes('v.redd.it') && post.selftext.length > 0 ) ? <p>{post.selftext}</p> : null } */}
+        {(post.url.includes('v.redd.it') || post.url.includes('i.redd.it')) ? null : <p className='postUrl'><a href={post.url} target="_blank" rel="noreferrer" >Click here for the details</a></p>}
         </div>
         <div className="footerContainer">
           <div className="footerElement">
