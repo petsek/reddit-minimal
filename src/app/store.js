@@ -7,6 +7,6 @@ export const store = configureStore({
   reducer: {
     post: postReducer,
     category: categorySlice,
-    search: searchSlice
+    search: searchSlice,
   }
 });

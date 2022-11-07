@@ -61,6 +61,8 @@ export const postSlice = createSlice ({
 })
 
 export const selectPost = (state) => state.post.posts;
+export const selectIsLoading = (state) => state.post.isLoading
+export const selectHasError = (state) => state.post.hasError
 
 export const {filterOnSearch} = postSlice.actions
 

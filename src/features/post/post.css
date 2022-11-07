@@ -4,6 +4,7 @@
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
   box-shadow: 10px 10px 5px #aaaaaa;
   background-color: white;
+  max-width: 700px;
 }
 
 .postTitle {
@@ -49,7 +50,7 @@ p a {
 }
 
 .footerElement {
-  width: 130px;
+  max-width: 130px;
   margin: 0;
   text-align: center;
 }
@@ -68,4 +69,36 @@ width: 100%;
 
 .postVideo {
 width: 100%;
+}
+
+
+.comment ul {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.comment li {
+  list-style-type: none;
+  border-bottom: 1px black solid;
+  width: 100%;
+}
+
+.comment li h5 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.comment li p {
+  margin-bottom: 5px;
+  text-align: left;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.footerElement button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }

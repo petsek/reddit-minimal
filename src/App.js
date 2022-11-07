@@ -10,8 +10,9 @@ function App() {
       <Header />
 
       <div className = 'bodyContainer'>
+        <SideContainer />       
         <MainContainer />
-        <SideContainer />
+
       </div>
       
     </div>
