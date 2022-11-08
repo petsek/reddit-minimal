@@ -71,6 +71,10 @@ width: 100%;
 width: 100%;
 }
 
+.comment {
+  max-width: 70vw;
+}
+
 
 .comment ul {
   padding-left: 5%;
