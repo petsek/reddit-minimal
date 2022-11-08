@@ -1,6 +1,6 @@
 # Reddit Minimal App
 
-# Description
+## Description
 
 This app receives posts and comments from Reddit's JSON API and presented them in a simplified user interface
 
@@ -12,11 +12,11 @@ This app receives posts and comments from Reddit's JSON API and presented them i
 * For every post number of likes, time elapsed since posting, link to original post and number of comments are displayed
 * By clicking on the comment button, the top 10 comments are displayed
 
-### How to use
+## How to use
 
 App can be accessed live on https://petsek-reddit-minimal.netlify.app/
 
-### Technologies
+## Technologies
 
 * HTML
 * CSS
