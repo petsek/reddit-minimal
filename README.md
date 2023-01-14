@@ -2,7 +2,7 @@
 
 ## Description
 
-This app receives posts and comments from Reddit's JSON API and presented them in a simplified user interface
+This app receives posts and comments from Reddit's JSON API and present them in a simplified user interface
 
 ## Features
 
